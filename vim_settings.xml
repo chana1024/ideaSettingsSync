@@ -49,7 +49,7 @@
       <shortcut-conflict owner="ide">
         <text>ctrl pressed Y</text>
       </shortcut-conflict>
-      <shortcut-conflict owner="ide">
+      <shortcut-conflict owner="vim">
         <text>ctrl pressed O</text>
       </shortcut-conflict>
       <shortcut-conflict owner="ide">
@@ -76,7 +76,7 @@
       <shortcut-conflict owner="ide">
         <text>ctrl pressed G</text>
       </shortcut-conflict>
-      <shortcut-conflict owner="ide">
+      <shortcut-conflict owner="vim">
         <text>ctrl pressed H</text>
       </shortcut-conflict>
       <shortcut-conflict owner="ide">
@@ -99,8 +99,8 @@
   <component name="VimSettings">
     <state version="7" enabled="false" />
     <notifications>
-      <idea-join enabled="false" />
-      <idea-put enabled="false" />
+      <idea-join enabled="true" />
+      <idea-put enabled="true" />
     </notifications>
   </component>
 </application>
