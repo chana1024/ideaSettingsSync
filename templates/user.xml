@@ -1,0 +1,41 @@
+<templateSet group="user">
+  <template name="setFeildInUpdate" value=" $var$.setUpdateBy(String.valueOf(SecurityUtils.getLoginUser().getUser().getUserId()));&#10; $var$.setUpdateTime(DateUtils.getNowTime());&#10; $var$Mapper.updateById($var$);" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="setFiledInInsert" value=" $var$.setCreateBy(String.valueOf(SecurityUtils.getLoginUser().getUser().getUserId()));&#10; $var$.setCreateTime(DateUtils.getNowTime());&#10; $var$Mapper.insert($var$);" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name=".lgtdel" value="and(wrapper-&gt;wrapper.isNull($var$::getDelFlag).or().gt($var$::getDelFlag,&quot;-1&quot;));" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name=".qgtdel" value=".gt(&quot;IFNULL(del_flag,1)&quot;,-1);" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="gnt" value="DateUtils.getNowTime()" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="logicdel" value="LambdaQueryWrapper&lt;$var$&gt; lqw = new LambdaQueryWrapper&lt;$var$&gt;();&#10;lqw.and(wrapper -&gt; wrapper.isNull($var$::getDelFlag).or().gt($var$::getDelFlag, &quot;-1&quot;));&#10;lqw.in($var$::getId,ids);&#10;        &#10;$var$ inout = new $var$();&#10;inout.setDelFlag(&quot;-1&quot;);&#10;$var$Mapper.update(inout,lqw);" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="userId" value="String.valueOf(SecurityUtils.getLoginUser().getUser().getUserId())" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>
