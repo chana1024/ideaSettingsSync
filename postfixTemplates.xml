@@ -1,17 +1,21 @@
 <application>
   <component name="PostfixTemplates">
-    <template id="ciem@userDefined" key=".ciem" provider="builtin.java" language-level="1.3" topmost="false">
+    <template id="lamq@userDefined" key=".lamq" provider="builtin.java" language-level="1.3" topmost="false">
       <conditions />
-      <template name="fakeKey" value="CollectionUtils.isEmpty($EXPR$)$END$" toReformat="true" toShortenFQNames="true" />
+      <template name="fakeKey" value="LambdaQueryWrapper&lt;$EXPR$&gt; lqw = new LambdaQueryWrapper&lt;$EXPR$&gt;();&#10;$END$" toReformat="true" toShortenFQNames="true" />
     </template>
     <template id="com.intellij.codeInsight.template.postfix.templates.NewExpressionPostfixTemplate#.new" key=".new" provider="builtin.java" builtin="com.intellij.codeInsight.template.postfix.templates.NewExpressionPostfixTemplate#.new" />
     <template id="siem@userDefined" key=".siem" provider="builtin.java" language-level="1.3" topmost="false">
       <conditions />
-      <template name="fakeKey" value="StringUtils.isEmpty($EXPR$)$END$" toReformat="true" toShortenFQNames="true" />
+      <template name="fakeKey" value="StringUtils.isEmpty($EXPR$)$END$" description="" toReformat="true" toShortenFQNames="true" />
     </template>
     <template id="newv@userDefined" key=".newv" provider="builtin.java" language-level="1.3" topmost="true">
       <conditions />
       <template name="fakeKey" value="$EXPR$ $END$$EXPR$ = new $EXPR$();" description="" toReformat="true" toShortenFQNames="true" />
+    </template>
+    <template id="ciem@userDefined" key=".ciem" provider="builtin.java" language-level="1.3" topmost="false">
+      <conditions />
+      <template name="fakeKey" value="CollectionUtils.isEmpty($EXPR$)$END$" description="" toReformat="true" toShortenFQNames="true" />
     </template>
   </component>
 </application>
