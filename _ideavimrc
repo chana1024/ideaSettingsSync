@@ -9,7 +9,7 @@ set number
 
 "======================================================================================================================>我的配置
 set surround
-set multiple-cursor
+set multiple-cursors
 " 相对当前行行数显示
 set relativenumber
 set scrolloff=3
@@ -24,7 +24,6 @@ set easymotion
 let g:EasyMotion_smartcase = 1
 "let g:EasyMotion_startofline = 0
 " keep cursor colum when JK motion
-map <Leader>b <Plug>(easymotion-b)
 map <Leader>h <Plug>(easymotion-linebackward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
